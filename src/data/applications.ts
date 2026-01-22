@@ -330,5 +330,104 @@ export const APP_DATA: Application[] = [
     status: "Estándar",
     description: "Programa de Centro de Iniciativas sobre Medios Audiovisuales.",
     risk: "Programa especial de la entidad. Bajo riesgo técnico."
+  },
+  {
+    name: "Conciliaciones v2",
+    url: "https://apps.personeriabogota.gov.co/conciliaciones_v2.1/login.php",
+    category: "Misional",
+    tech: "PHP / Sistema de conciliación",
+    criticality: "Alta",
+    dependency: "Muy Alta",
+    status: "Moderno",
+    description: "Versión moderna del sistema de gestión de conciliaciones. Plataforma actualizada para procesos de resolución alternativa de conflictos.",
+    risk: "Crítica para función conciliadora. Dependencia alta de usuarios y procesos."
+  },
+  {
+    name: "Consulta de Conciliaciones (Legacy)",
+    url: "https://apps.personeriabogota.gov.co/Conciliaciones/login.php",
+    category: "Misional",
+    tech: "PHP / Legacy",
+    criticality: "Alta",
+    dependency: "Muy Alta",
+    status: "Legacy",
+    description: "Sistema antiguo de consulta y gestión de conciliaciones. Versión anterior a Conciliaciones v2.",
+    risk: "Tecnología obsoleta. Requiere migración urgente a v2."
+  },
+  {
+    name: "Disciplinarios",
+    url: "https://apps.personeriabogota.gov.co/disciplinados/login.php",
+    category: "Misional",
+    tech: "PHP / Base de datos",
+    criticality: "Alta",
+    dependency: "Media",
+    status: "Estándar",
+    description: "Gestión de procesos disciplinarios contra servidores públicos. Registro de expedientes y seguimiento.",
+    risk: "Información sensible de investigaciones. Crítica para función disciplinaria."
+  },
+  {
+    name: "Centros de Conciliación",
+    url: "https://apps.personeriabogota.gov.co/centroscom/login.php",
+    category: "Administrativo",
+    tech: "PHP / Sistema administrativo",
+    criticality: "Media",
+    dependency: "Media",
+    status: "Estándar",
+    description: "Gestión administrativa de centros de conciliación. Control de sedes, recursos y disponibilidad.",
+    risk: "Coordinación de infraestructura. Bajo riesgo técnico."
+  },
+  {
+    name: "Chat 2 (Sistema de Mensajería)",
+    url: "https://chat.personeriabogota.gov.co/chat_nuevo/index.php/site_admin/user/login",
+    category: "Administrativo",
+    tech: "PHP / Chat Web",
+    criticality: "Media",
+    dependency: "Baja",
+    status: "Moderno",
+    description: "Sistema de chat interno para comunicación entre colaboradores. Versión nueva del sistema de mensajería.",
+    risk: "Comunicación interna. Potencial exposición de datos en chat."
+  },
+  {
+    name: "Digiturno (Puerto Alternativo)",
+    url: "https://digiturno.personeriabogota.gov.co:8915/",
+    category: "Ciudadano",
+    tech: "Software Propietario / Puerto 8915",
+    criticality: "Media",
+    dependency: "Baja",
+    status: "Legacy",
+    description: "Sistema de turnos en puerto alternativo. Versión redundante o complementaria del servicio principal.",
+    risk: "Exposición de puertos no estándar. Redundancia unclear."
+  },
+  {
+    name: "SIPOD (Unidad para Víctimas)",
+    url: "http://sipod.unidadvictimas.gov.co/",
+    category: "Misional",
+    tech: "Web App Gobierno / Unidad Víctimas",
+    criticality: "Alta",
+    dependency: "Media",
+    status: "Externo",
+    description: "Sistema de la Unidad Nacional de Víctimas para registro y seguimiento de víctimas del conflicto. Integración con entidades nacionales.",
+    risk: "Información altamente sensible. Dependencia de sistema nacional."
+  },
+  {
+    name: "SDP Extranet (Secretaría Distrital Planeación)",
+    url: "http://www.sdp.gov.co/extranet",
+    category: "Administrativo",
+    tech: "Portal Web Gubernamental",
+    criticality: "Media",
+    dependency: "Baja",
+    status: "Externo",
+    description: "Acceso a sistemas y servicios de la Secretaría Distrital de Planeación. Información urbanística y territorial del Distrito.",
+    risk: "Dependencia de infraestructura distrital. No controlada por Personería."
+  },
+  {
+    name: "SECOP (Sistema Electrónico Contratación Pública)",
+    url: "https://community.secop.gov.co/STS/CCE/Login.aspx",
+    category: "Administrativo",
+    tech: "Portal Web Nacional / ASP.NET",
+    criticality: "Alta",
+    dependency: "Baja",
+    status: "Externo",
+    description: "Sistema nacional obligatorio para publicación y seguimiento de procesos de contratación pública. Plataforma centralizada del Estado.",
+    risk: "Cumplimiento legal obligatorio. Auditable por órganos de control."
   }
 ];
