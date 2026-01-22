@@ -209,5 +209,126 @@ export const APP_DATA: Application[] = [
     status: "Estándar",
     description: "Acceso público a reportes, estadísticas y datos de gestión institucional.",
     risk: "Vitrina pública de la entidad. Caída afecta reputación y acceso a información."
+  },
+  {
+    name: "Intranet Institucional",
+    url: "https://intranet.personeriabogota.gov.co/",
+    category: "Administrativo",
+    tech: "Joomla CMS / Portal Interno",
+    criticality: "Alta",
+    dependency: "Media",
+    status: "Moderno",
+    description: "Portal interno para empleados. Acceso a herramientas, comunicados y servicios internos.",
+    risk: "Punto de acceso central para empleados. Información sensible de recursos humanos."
+  },
+  {
+    name: "SG-SST (Seguridad y Salud en el Trabajo)",
+    url: "https://intranet.personeriabogota.gov.co/sgsst",
+    category: "Administrativo",
+    tech: "Web App / Sistema de gestión",
+    criticality: "Alta",
+    dependency: "Media",
+    status: "Moderno",
+    description: "Gestión del sistema de seguridad y salud en el trabajo. Reportes de accidentes e incidentes.",
+    risk: "Datos sensibles de salud ocupacional. Auditable por entidades regulatorias."
+  },
+  {
+    name: "Servicios Web Internos",
+    url: "https://intranet.personeriabogota.gov.co/servicios-web-internos/",
+    category: "Administrativo",
+    tech: "Portal Integrado",
+    criticality: "Media",
+    dependency: "Media",
+    status: "Moderno",
+    description: "Portal de acceso a servicios internos disponibles para empleados.",
+    risk: "Centro de distribución de accesos. Requiere gestión de permisos robusta."
+  },
+  {
+    name: "Learning Net SGC (Formación ISO 9001)",
+    url: "https://intranet.personeriabogota.gov.co/learning-net-sgc-formacion-autonoma-iso-9001",
+    category: "Administrativo",
+    tech: "Learning Management System (LMS)",
+    criticality: "Media",
+    dependency: "Baja",
+    status: "Moderno",
+    description: "Plataforma de aprendizaje en línea para formación sobre Sistema de Gestión de Calidad.",
+    risk: "Capacitación obligatoria. Auditable para certificación ISO 9001."
+  },
+  {
+    name: "SICAPITAL",
+    url: "https://apps.personeriabogota.gov.co/accesos/",
+    category: "Administrativo",
+    tech: "Sistema de Activos / ERP",
+    criticality: "Media",
+    dependency: "Baja",
+    status: "Estándar",
+    description: "Sistema de gestión y control de capital, activos fijos y recursos institucionales.",
+    risk: "Control de activos. Crítica para auditoría financiera."
+  },
+  {
+    name: "Help Desk / Soporte Técnico",
+    url: "https://apps.personeriabogota.gov.co/dominio/frmHelpDesk.php",
+    category: "Administrativo",
+    tech: "PHP / Sistema de tickets",
+    criticality: "Media",
+    dependency: "Media",
+    status: "Estándar",
+    description: "Sistema de tickets para solicitudes de soporte técnico a TI.",
+    risk: "Portal de acceso a TI. Gestión de passwords y accesos sensibles."
+  },
+  {
+    name: "SharePoint - Conocimiento e Innovación",
+    url: "https://personeriabogota.sharepoint.com/sites/DireccindeGestindelConocimientoeInnovacin",
+    category: "Administrativo",
+    tech: "Microsoft SharePoint / Cloud",
+    criticality: "Alta",
+    dependency: "Baja",
+    status: "Moderno",
+    description: "Plataforma colaborativa para gestión de conocimiento, documentos e innovación.",
+    risk: "Repositorio de documentos sensibles. Dependencia de Microsoft Cloud."
+  },
+  {
+    name: "Comité Operativo de Emergencias",
+    url: "https://intranet.personeriabogota.gov.co/comite-operativo-de-emergencias",
+    category: "Administrativo",
+    tech: "Web App / Gestión de crisis",
+    criticality: "Alta",
+    dependency: "Media",
+    status: "Moderno",
+    description: "Portal para coordinación y gestión de emergencias y continuidad del negocio.",
+    risk: "Crítica en casos de desastre. Requiere disponibilidad 24/7."
+  },
+  {
+    name: "Certificaciones Contractuales (Microsoft Forms)",
+    url: "https://forms.office.com/pages/responsepage.aspx?id=1vP5G0SgD0alq48zgIl7BdkVkityv39DhfJkMgW4RMBURU1aSUdPUE5JRjRETDhCV0hWS1NHRkhONS4u",
+    category: "Administrativo",
+    tech: "Microsoft Forms / Cloud",
+    criticality: "Media",
+    dependency: "Baja",
+    status: "Moderno",
+    description: "Formulario en línea para solicitud de certificaciones contractuales de empleados.",
+    risk: "Datos de contrataciones. Uso de herramienta cloud Microsoft."
+  },
+  {
+    name: "Reporte de Accidentes/Incidentes Laborales",
+    url: "https://forms.office.com/r/5Bz8ryeRJV",
+    category: "Administrativo",
+    tech: "Microsoft Forms / Cloud",
+    criticality: "Alta",
+    dependency: "Baja",
+    status: "Moderno",
+    description: "Formulario para reporte de accidentes e incidentes laborales.",
+    risk: "Información sensible de salud. Obligatorio por ley. Auditable por ARL."
+  },
+  {
+    name: "Programa CIMA",
+    url: "http://www.personeriabogota.gov.co/programa-cima/",
+    category: "Ciudadano",
+    tech: "Web App",
+    criticality: "Media",
+    dependency: "Baja",
+    status: "Estándar",
+    description: "Programa de Centro de Iniciativas sobre Medios Audiovisuales.",
+    risk: "Programa especial de la entidad. Bajo riesgo técnico."
   }
 ];
