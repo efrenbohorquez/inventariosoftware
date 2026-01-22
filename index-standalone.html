@@ -887,6 +887,105 @@
                 status: "Legacy",
                 description: "Canal de atención síncrona asistida por humanos (15 operadores).",
                 risk: "Escalabilidad limitada a la nómina humana; no posee IA robusta."
+            },
+            {
+                name: "Tutelas en Línea",
+                url: "https://www.personeriabogota.gov.co/servicios-a-la-ciudadania/tutelas-en-linea",
+                category: "Ciudadano",
+                tech: "Web App",
+                criticality: "Alta",
+                dependency: "Media",
+                status: "Moderno",
+                description: "Sistema para radicación y seguimiento de tutelas, impugnaciones y desacatos en línea.",
+                risk: "Impacto legal directo en procesos constitucionales. Requiere auditoría permanente."
+            },
+            {
+                name: "Conciliaciones en Línea",
+                url: "https://conciwebv2.personeriabogota.gov.co/",
+                category: "Ciudadano",
+                tech: "Web App / Gestor de conflictos",
+                criticality: "Alta",
+                dependency: "Media",
+                status: "Moderno",
+                description: "Plataforma para gestión y seguimiento de procesos de conciliación.",
+                risk: "Crítica para resolución alternativa de conflictos. Datos sensibles de disputantes."
+            },
+            {
+                name: "Relatoría de la Potestad Disciplinaria",
+                url: "https://relatorias.personeriabogota.gov.co/relatoria/consulta",
+                category: "Ciudadano",
+                tech: "Portal Web / Base de datos",
+                criticality: "Alta",
+                dependency: "Baja",
+                status: "Moderno",
+                description: "Consulta de expedientes y antecedentes disciplinarios de servidores públicos.",
+                risk: "Información pública sensible. Acceso abierto a información de expedientes disciplinarios."
+            },
+            {
+                name: "Chat Bot Inteligente",
+                url: "https://frontos.outsourcing.com.co:8706/TestChatBot/Test?CampanaId=nYw6J7YK5ZBPju9xh83SqQ==",
+                category: "Ciudadano",
+                tech: "Bot IA / Cloud Outsourcing",
+                criticality: "Media",
+                dependency: "Baja",
+                status: "Moderno",
+                description: "Bot conversacional para orientación inicial a ciudadanos.",
+                risk: "Dependencia de proveedor externo. Integración con infraestructura tercerizada."
+            },
+            {
+                name: "Línea 143 (Atención Telefónica)",
+                url: "https://www.personeriabogota.gov.co/tramites-servicios-sedes-y-canales-de-atencion/personeria-linea-143",
+                category: "Ciudadano",
+                tech: "Sistema Telefónico / Call Center",
+                criticality: "Alta",
+                dependency: "Extrema",
+                status: "Legacy",
+                description: "Línea gratuita de atención ciudadana 24/7 para denuncias y orientación.",
+                risk: "Dependencia 100% de infraestructura telefónica y personal humano. Escala limitada."
+            },
+            {
+                name: "PQRSD (Peticiones, Quejas, Reclamos, Sugerencias, Denuncias)",
+                url: "https://www.personeriabogota.gov.co/al-servicio-de-la-ciudad/peticiones-quejas-reclamos-sugerencias-denuncias-y-felicitaciones",
+                category: "Ciudadano",
+                tech: "Portal Web / Gestor documental",
+                criticality: "Crítica",
+                dependency: "Media",
+                status: "Estándar",
+                description: "Tramitador de peticiones, quejas, reclamos y denuncias contra funcionarios públicos.",
+                risk: "Eje central de la función de control. Manejo de información sensible de denuncias."
+            },
+            {
+                name: "WhatsApp Institucional",
+                url: "https://wa.link/c5313e",
+                category: "Ciudadano",
+                tech: "WhatsApp Business API / Cloud",
+                criticality: "Media",
+                dependency: "Extrema",
+                status: "Moderno",
+                description: "Atención por WhatsApp para consultas ciudadanas y denuncias.",
+                risk: "Dependencia total de Meta/WhatsApp. Información sensible en plataforma tercerizada."
+            },
+            {
+                name: "Sistema de Gestión de Calidad (SGC)",
+                url: "https://isolucion.personeriabogota.gov.co/Isolucion/PaginaLogin.aspx",
+                category: "Administrativo",
+                tech: "ASP.NET / SGC Integrado",
+                criticality: "Media",
+                dependency: "Baja",
+                status: "Estándar",
+                description: "Gestión de procesos, procedimientos y mejora continua según normativa ICONTEC.",
+                risk: "Fuente de verdad normativa. Cambios requieren coordinación institucional."
+            },
+            {
+                name: "Portal de Transparencia y Datos Abiertos",
+                url: "https://www.personeriabogota.gov.co",
+                category: "Ciudadano",
+                tech: "Joomla CMS / Portal de datos",
+                criticality: "Alta",
+                dependency: "Media",
+                status: "Estándar",
+                description: "Acceso público a reportes, estadísticas y datos de gestión institucional.",
+                risk: "Vitrina pública de la entidad. Caída afecta reputación y acceso a información."
             }
         ];
 
