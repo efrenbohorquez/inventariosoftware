@@ -651,6 +651,433 @@
                 margin: 1rem;
             }
         }
+
+        /* Tab Navigation */
+        .tabs-navigation {
+            display: flex;
+            gap: 0;
+            border-bottom: 2px solid #e0e0e0;
+            background: #f8f9fa;
+            padding: 0 2rem;
+            margin-bottom: 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .tab-btn {
+            padding: 1rem 1.5rem;
+            border: none;
+            background: none;
+            color: #666;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.95rem;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .tab-btn:hover {
+            color: #0066cc;
+        }
+
+        .tab-btn.active {
+            color: #0066cc;
+            border-bottom-color: #0066cc;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Diagnostic Section */
+        .diagnostic-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .diagnostic-section {
+            margin-bottom: 3rem;
+        }
+
+        .diagnostic-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Scorecard */
+        .scorecard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .score-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .score-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .score-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+
+        .score-bar {
+            height: 8px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+
+        .score-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+
+        /* Standards Matrix */
+        .standards-matrix {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .standard-row {
+            display: grid;
+            grid-template-columns: 50px 1fr 200px;
+            gap: 1rem;
+            align-items: center;
+            padding: 1rem;
+            border-left: 4px solid;
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease;
+        }
+
+        .standard-row:hover {
+            transform: translateX(4px);
+        }
+
+        .standard-row.critical {
+            border-left-color: #ff6b6b;
+            background: #fff5f5;
+        }
+
+        .standard-row.high {
+            border-left-color: #ffa94d;
+            background: #fffbf0;
+        }
+
+        .standard-row.medium {
+            border-left-color: #ffd43b;
+            background: #fffef0;
+        }
+
+        .standard-row.low {
+            border-left-color: #51cf66;
+            background: #f1fdf4;
+        }
+
+        .standard-num {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #666;
+            text-align: center;
+        }
+
+        .standard-info {
+            padding: 0 0.5rem;
+        }
+
+        .standard-name {
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.25rem;
+        }
+
+        .standard-desc {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .standard-score {
+            font-weight: 600;
+            text-align: right;
+            color: #0066cc;
+            font-size: 0.95rem;
+        }
+
+        /* Findings Grid */
+        .findings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .finding-card {
+            border-left: 4px solid;
+            padding: 1.5rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .finding-card.critical {
+            border-left-color: #ff6b6b;
+            background: #fff5f5;
+        }
+
+        .finding-card.high {
+            border-left-color: #ffa94d;
+            background: #fffbf0;
+        }
+
+        .finding-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .finding-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .finding-badge.critical {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .finding-badge.high {
+            background: #ffa94d;
+            color: white;
+        }
+
+        .finding-title {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .finding-card p {
+            margin: 1rem 0;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .finding-action {
+            padding: 0.75rem;
+            background: rgba(0,0,0,0.05);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-top: 1rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .timeline-item {
+            border-left: 4px solid;
+            padding: 1.5rem;
+            border-radius: 6px;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        .timeline-item.phase1 { border-left-color: #4c6ef5; background: #f0f3ff; }
+        .timeline-item.phase2 { border-left-color: #0066cc; background: #e6f2ff; }
+        .timeline-item.phase3 { border-left-color: #00a86b; background: #e6fdf4; }
+        .timeline-item.phase4 { border-left-color: #9775fa; background: #f3f0ff; }
+
+        .timeline-marker {
+            position: absolute;
+            top: -12px;
+            left: 0;
+            background: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.75rem;
+            color: white;
+            border: 2px solid;
+        }
+
+        .timeline-item.phase1 .timeline-marker { 
+            background: #4c6ef5; border-color: #4c6ef5;
+        }
+        .timeline-item.phase2 .timeline-marker { 
+            background: #0066cc; border-color: #0066cc;
+        }
+        .timeline-item.phase3 .timeline-marker { 
+            background: #00a86b; border-color: #00a86b;
+        }
+        .timeline-item.phase4 .timeline-marker { 
+            background: #9775fa; border-color: #9775fa;
+        }
+
+        .timeline-content h4 {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        .timeline-content p {
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+
+        .timeline-content ul {
+            list-style: none;
+            padding: 0.5rem 0;
+            margin: 0.5rem 0;
+        }
+
+        .timeline-content li {
+            font-size: 0.85rem;
+            color: #666;
+            margin: 0.3rem 0;
+        }
+
+        .timeline-budget {
+            font-weight: 600;
+            color: #0066cc;
+            margin-top: 0.75rem !important;
+        }
+
+        /* ROI Grid */
+        .roi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .roi-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .roi-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+
+        .roi-value {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+
+        .roi-detail {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        /* Metrics List */
+        .metrics-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .metric-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 6px;
+            border-left: 4px solid #51cf66;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+
+        .metric-icon {
+            font-size: 1.5rem;
+            color: #51cf66;
+        }
+
+        .metric-item div {
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .tabs-navigation {
+                padding: 0 1rem;
+                overflow-x: auto;
+            }
+
+            .tab-btn {
+                padding: 0.75rem 1rem;
+                font-size: 0.85rem;
+            }
+
+            .standard-row {
+                grid-template-columns: 40px 1fr 150px;
+                gap: 0.75rem;
+                padding: 0.75rem;
+            }
+
+            .diagnostic-container {
+                padding: 0 1rem;
+            }
+
+            .findings-grid,
+            .scorecard-grid,
+            .roi-grid,
+            .timeline {
+                grid-template-columns: 1fr;
+            }
+
+            .diagnostic-section h2 {
+                font-size: 1.4rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -687,32 +1114,371 @@
 
     <!-- Main -->
     <main>
-        <!-- Filters -->
-        <div class="filters">
-            <div class="search-box">
-                <span class="search-icon">🔍</span>
-                <input 
-                    type="text" 
-                    id="searchInput" 
-                    placeholder="Buscar por nombre o descripción..."
-                >
+        <!-- Tab Navigation -->
+        <div class="tabs-navigation">
+            <button class="tab-btn active" data-tab="inventario">📱 Inventario</button>
+            <button class="tab-btn" data-tab="diagnostico">📊 Diagnóstico MINTIC</button>
+        </div>
+
+        <!-- TAB 1: Inventario -->
+        <div id="tab-inventario" class="tab-content active">
+            <!-- Filters -->
+            <div class="filters">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Buscar por nombre o descripción..."
+                    >
+                </div>
+                <div class="category-filter">
+                    <button class="category-btn active" data-category="Todos">Todos</button>
+                    <button class="category-btn" data-category="Misional">Misional</button>
+                    <button class="category-btn" data-category="Administrativo">Admin</button>
+                    <button class="category-btn" data-category="Ciudadano">Ciudadano</button>
+                </div>
             </div>
-            <div class="category-filter">
-                <button class="category-btn active" data-category="Todos">Todos</button>
-                <button class="category-btn" data-category="Misional">Misional</button>
-                <button class="category-btn" data-category="Administrativo">Admin</button>
-                <button class="category-btn" data-category="Ciudadano">Ciudadano</button>
+
+            <!-- Grid -->
+            <div class="grid" id="appsGrid"></div>
+
+            <!-- Empty State -->
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <div class="empty-icon">🔍</div>
+                <h3>No se encontraron aplicativos</h3>
+                <p>Intenta con otros términos de búsqueda.</p>
             </div>
         </div>
 
-        <!-- Grid -->
-        <div class="grid" id="appsGrid"></div>
+        <!-- TAB 2: Diagnóstico MINTIC -->
+        <div id="tab-diagnostico" class="tab-content">
+            <div class="diagnostic-container">
+                <!-- Conformity Scorecard -->
+                <section class="diagnostic-section">
+                    <h2>📊 Conformidad MINTIC 2025</h2>
+                    <div class="scorecard-grid">
+                        <div class="score-card">
+                            <div class="score-label">Conformidad Actual</div>
+                            <div class="score-value" style="color: #ff6b6b;">57.9%</div>
+                            <div class="score-bar">
+                                <div class="score-fill" style="width: 57.9%; background-color: #ff6b6b;"></div>
+                            </div>
+                        </div>
+                        <div class="score-card">
+                            <div class="score-label">Conformidad Meta</div>
+                            <div class="score-value" style="color: #51cf66;">99.1%</div>
+                            <div class="score-bar">
+                                <div class="score-fill" style="width: 99.1%; background-color: #51cf66;"></div>
+                            </div>
+                        </div>
+                        <div class="score-card">
+                            <div class="score-label">Brecha a Cerrar</div>
+                            <div class="score-value" style="color: #ffa94d;">-41.2%</div>
+                            <div class="score-bar">
+                                <div class="score-fill" style="width: 41.2%; background-color: #ffa94d;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-        <!-- Empty State -->
-        <div class="empty-state" id="emptyState" style="display: none;">
-            <div class="empty-icon">🔍</div>
-            <h3>No se encontraron aplicativos</h3>
-            <p>Intenta con otros términos de búsqueda.</p>
+                <!-- 15 Standards Matrix -->
+                <section class="diagnostic-section">
+                    <h2>🎯 Matriz de 15 Estándares MINTIC</h2>
+                    <div class="standards-matrix">
+                        <div class="standard-row critical">
+                            <div class="standard-num">1</div>
+                            <div class="standard-info">
+                                <div class="standard-name">WCAG 2.1 AA (Accesibilidad Web)</div>
+                                <div class="standard-desc">Cumplimiento de directrices de accesibilidad</div>
+                            </div>
+                            <div class="standard-score">55% → 100%</div>
+                        </div>
+                        <div class="standard-row critical">
+                            <div class="standard-num">2</div>
+                            <div class="standard-info">
+                                <div class="standard-name">OWASP Top 10 (Seguridad)</div>
+                                <div class="standard-desc">Protección contra vulnerabilidades críticas</div>
+                            </div>
+                            <div class="standard-score">30% → 100%</div>
+                        </div>
+                        <div class="standard-row critical">
+                            <div class="standard-num">3</div>
+                            <div class="standard-info">
+                                <div class="standard-name">LPDP + Decreto 1377 (Datos)</div>
+                                <div class="standard-desc">Protección de datos personales</div>
+                            </div>
+                            <div class="standard-score">40% → 100%</div>
+                        </div>
+                        <div class="standard-row high">
+                            <div class="standard-num">4</div>
+                            <div class="standard-info">
+                                <div class="standard-name">MFA + Autenticación</div>
+                                <div class="standard-desc">Multi-factor en accesos críticos</div>
+                            </div>
+                            <div class="standard-score">25% → 100%</div>
+                        </div>
+                        <div class="standard-row high">
+                            <div class="standard-num">5</div>
+                            <div class="standard-info">
+                                <div class="standard-name">HTTPS/TLS Encryption</div>
+                                <div class="standard-desc">Encriptación en tránsito</div>
+                            </div>
+                            <div class="standard-score">60% → 100%</div>
+                        </div>
+                        <div class="standard-row high">
+                            <div class="standard-num">6</div>
+                            <div class="standard-info">
+                                <div class="standard-name">Usabilidad MINTIC</div>
+                                <div class="standard-desc">Interfaces intuitivas y responsive</div>
+                            </div>
+                            <div class="standard-score">60% → 95%</div>
+                        </div>
+                        <div class="standard-row high">
+                            <div class="standard-num">7</div>
+                            <div class="standard-info">
+                                <div class="standard-name">Datos Abiertos (Ley 1712)</div>
+                                <div class="standard-desc">Transparencia y acceso a información</div>
+                            </div>
+                            <div class="standard-score">20% → 100%</div>
+                        </div>
+                        <div class="standard-row medium">
+                            <div class="standard-num">8</div>
+                            <div class="standard-info">
+                                <div class="standard-name">Validación Formularios</div>
+                                <div class="standard-desc">Integridad de datos entrada</div>
+                            </div>
+                            <div class="standard-score">70% → 100%</div>
+                        </div>
+                        <div class="standard-row medium">
+                            <div class="standard-num">9</div>
+                            <div class="standard-info">
+                                <div class="standard-name">Cookies/Consentimiento</div>
+                                <div class="standard-desc">Cumplimiento GDPR-like</div>
+                            </div>
+                            <div class="standard-score">35% → 100%</div>
+                        </div>
+                        <div class="standard-row medium">
+                            <div class="standard-num">10</div>
+                            <div class="standard-info">
+                                <div class="standard-name">Estándares Abiertos</div>
+                                <div class="standard-desc">Uso de protocolos/formatos abiertos</div>
+                            </div>
+                            <div class="standard-score">40% → 90%</div>
+                        </div>
+                        <div class="standard-row medium">
+                            <div class="standard-num">11</div>
+                            <div class="standard-info">
+                                <div class="standard-name">SLA 99% Disponibilidad</div>
+                                <div class="standard-desc">Uptime y continuidad</div>
+                            </div>
+                            <div class="standard-score">75% → 99%</div>
+                        </div>
+                        <div class="standard-row medium">
+                            <div class="standard-num">12</div>
+                            <div class="standard-info">
+                                <div class="standard-name">CI/CD + Versionado</div>
+                                <div class="standard-desc">DevOps maturity</div>
+                            </div>
+                            <div class="standard-score">20% → 95%</div>
+                        </div>
+                        <div class="standard-row low">
+                            <div class="standard-num">13</div>
+                            <div class="standard-info">
+                                <div class="standard-name">ISO 27001</div>
+                                <div class="standard-desc">Gestión de seguridad</div>
+                            </div>
+                            <div class="standard-score">45% → 100%</div>
+                        </div>
+                        <div class="standard-row low">
+                            <div class="standard-num">14</div>
+                            <div class="standard-info">
+                                <div class="standard-name">Compliance Normativa</div>
+                                <div class="standard-desc">Cumplimiento legal sector público</div>
+                            </div>
+                            <div class="standard-score">50% → 100%</div>
+                        </div>
+                        <div class="standard-row low">
+                            <div class="standard-num">15</div>
+                            <div class="standard-info">
+                                <div class="standard-name">Logging/Auditoría</div>
+                                <div class="standard-desc">Trazabilidad de operaciones</div>
+                            </div>
+                            <div class="standard-score">30% → 100%</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Critical Findings -->
+                <section class="diagnostic-section">
+                    <h2>🚨 Hallazgos Críticos</h2>
+                    <div class="findings-grid">
+                        <div class="finding-card critical">
+                            <div class="finding-header">
+                                <span class="finding-badge critical">CRÍTICO</span>
+                                <span class="finding-title">OWASP Security (30% → 100%)</span>
+                            </div>
+                            <p>70% de brechas críticas en seguridad. Requiere auditoría inmediata.</p>
+                            <div class="finding-action">🔴 Acción inmediata requerida</div>
+                        </div>
+                        <div class="finding-card critical">
+                            <div class="finding-header">
+                                <span class="finding-badge critical">CRÍTICO</span>
+                                <span class="finding-title">Datos Abiertos (20% → 100%)</span>
+                            </div>
+                            <p>80% de brecha en conformidad con Ley 1712. Plataforma de transparencia incompleta.</p>
+                            <div class="finding-action">🔴 Acción inmediata requerida</div>
+                        </div>
+                        <div class="finding-card critical">
+                            <div class="finding-header">
+                                <span class="finding-badge critical">CRÍTICO</span>
+                                <span class="finding-title">WCAG Accesibilidad (55% → 100%)</span>
+                            </div>
+                            <p>45% de brechas en accesibilidad. Afecta ciudadanos con discapacidades.</p>
+                            <div class="finding-action">🔴 Acción inmediata requerida</div>
+                        </div>
+                        <div class="finding-card high">
+                            <div class="finding-header">
+                                <span class="finding-badge high">ALTO</span>
+                                <span class="finding-title">DevOps Maturity (20% → 95%)</span>
+                            </div>
+                            <p>Falta de CI/CD, control de versiones y automatización de despliegue.</p>
+                            <div class="finding-action">🟠 Implementar en Q2 2026</div>
+                        </div>
+                        <div class="finding-card high">
+                            <div class="finding-header">
+                                <span class="finding-badge high">ALTO</span>
+                                <span class="finding-title">MFA + Autenticación (25% → 100%)</span>
+                            </div>
+                            <p>75% de sistemas sin multi-factor. Riesgo elevado de acceso no autorizado.</p>
+                            <div class="finding-action">🟠 Implementar en Q2 2026</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Implementation Timeline -->
+                <section class="diagnostic-section">
+                    <h2>📅 Roadmap de Implementación (8 meses)</h2>
+                    <div class="timeline">
+                        <div class="timeline-item phase1">
+                            <div class="timeline-marker">FASE 1</div>
+                            <div class="timeline-content">
+                                <h4>Enero - Febrero 2026</h4>
+                                <p><strong>Auditoría Integral & Diseño</strong></p>
+                                <ul>
+                                    <li>✓ Auditoría WCAG + OWASP</li>
+                                    <li>✓ Rediseño arquitectura</li>
+                                    <li>✓ Plan seguridad detallado</li>
+                                </ul>
+                                <p class="timeline-budget">💰 $50M</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item phase2">
+                            <div class="timeline-marker">FASE 2</div>
+                            <div class="timeline-content">
+                                <h4>Marzo - Abril 2026</h4>
+                                <p><strong>Frontend + Seguridad</strong></p>
+                                <ul>
+                                    <li>✓ Rediseño UI/UX WCAG AA</li>
+                                    <li>✓ Implementar MFA + OAuth2</li>
+                                    <li>✓ HTTPS en todas las apps</li>
+                                </ul>
+                                <p class="timeline-budget">💰 $65M</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item phase3">
+                            <div class="timeline-marker">FASE 3</div>
+                            <div class="timeline-content">
+                                <h4>Mayo 2026</h4>
+                                <p><strong>Backend + DevOps</strong></p>
+                                <ul>
+                                    <li>✓ Refactor servicios backend</li>
+                                    <li>✓ CI/CD + Versionado</li>
+                                    <li>✓ SLA 99% uptime</li>
+                                </ul>
+                                <p class="timeline-budget">💰 $60M</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item phase4">
+                            <div class="timeline-marker">FASE 4</div>
+                            <div class="timeline-content">
+                                <h4>Junio 2026</h4>
+                                <p><strong>Testing + Datos Abiertos</strong></p>
+                                <ul>
+                                    <li>✓ QA exhaustivo</li>
+                                    <li>✓ Portal datos abiertos (Ley 1712)</li>
+                                    <li>✓ Go-Live producción</li>
+                                </ul>
+                                <p class="timeline-budget">💰 $35M</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Budget & ROI -->
+                <section class="diagnostic-section">
+                    <h2>💰 Inversión & ROI</h2>
+                    <div class="roi-grid">
+                        <div class="roi-card">
+                            <div class="roi-label">Inversión Total</div>
+                            <div class="roi-value">$210M</div>
+                            <div class="roi-detail">Presupuesto 8 meses</div>
+                        </div>
+                        <div class="roi-card">
+                            <div class="roi-label">Reducción Riesgos</div>
+                            <div class="roi-value">73%</div>
+                            <div class="roi-detail">Eliminación de vulnerabilidades</div>
+                        </div>
+                        <div class="roi-card">
+                            <div class="roi-label">Break-Even</div>
+                            <div class="roi-value">3.5 años</div>
+                            <div class="roi-detail">Por ahorros operacionales</div>
+                        </div>
+                        <div class="roi-card">
+                            <div class="roi-label">ROI Año 2</div>
+                            <div class="roi-value">+36%</div>
+                            <div class="roi-detail">Retorno en inversión</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Key Metrics -->
+                <section class="diagnostic-section">
+                    <h2>📈 Indicadores Clave de Éxito</h2>
+                    <div class="metrics-list">
+                        <div class="metric-item">
+                            <span class="metric-icon">✓</span>
+                            <div>
+                                <strong>Conformidad MINTIC:</strong> 57.9% → 99.1% (+41.2%)
+                            </div>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-icon">✓</span>
+                            <div>
+                                <strong>Tiempo Promedio Resolución:</strong> 8 días → 2 días
+                            </div>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-icon">✓</span>
+                            <div>
+                                <strong>Satisfacción Ciudadanos:</strong> 62% → 92%
+                            </div>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-icon">✓</span>
+                            <div>
+                                <strong>Disponibilidad (SLA):</strong> 92% → 99.5%
+                            </div>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-icon">✓</span>
+                            <div>
+                                <strong>Velocidad Transformación Digital:</strong> 15% → 85%
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
     </main>
 
@@ -1319,6 +2085,27 @@
             if (e.target === document.getElementById('detailModal')) {
                 closeModal();
             }
+        });
+
+        // Tab Navigation
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const tabName = e.target.dataset.tab;
+                
+                // Hide all tabs
+                document.querySelectorAll('.tab-content').forEach(tab => {
+                    tab.classList.remove('active');
+                });
+                
+                // Remove active class from all buttons
+                document.querySelectorAll('.tab-btn').forEach(b => {
+                    b.classList.remove('active');
+                });
+                
+                // Show selected tab
+                document.getElementById(`tab-${tabName}`).classList.add('active');
+                e.target.classList.add('active');
+            });
         });
 
         // Initialize
